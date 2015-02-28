@@ -1,78 +1,43 @@
-<?php 
-	class PGsqlDAO
-	{
-		private $dbname ='dc1672b9586skj';									//Name of the database
-		private $dbuser ='cjpuplxhiyanhv';									//Username for the db
-		private $dbpass ='3190Aj5LPHYNDkhedIgjoAQF29';						//Password for the db
-		private $dbserver ='ec2-23-21-231-14.compute-1.amazonaws.com';		//Name of the pgsql server
-		private $dbcnx;
-		
-		private function __construct()
-		{
-			$this->connect();
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuT51pdC9Crt9R0MmhD-UMK_FYQUiHkNY">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat:32.0808800	, lng: 34.7805700},
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+         google.maps.event.addListener(map, 'click', function(e) {
+			placeMarker(e.latLng, map);
+			document.getElementById("lng").innerHTML = ""+e.latLng.lat();
+			document.getElementById("lat").innerHTML = ""+e.latLng.lng();
+			window.open("addSpot.php?lat="+e.latLng.lat()+"&&lng="+e.latLng.lng()+"");
+    //<?php> php scripit should placed here
+//<?>
+  });
+      }
+      function placeMarker(position, map) {
+		var marker = new google.maps.Marker({
+			position: position,
+			map: map,
+			title : position.toString()
+			});
 		}
-		
-		public static function getInstance()
-		{
-			static $instance = null;
-			if($instance === null) {
-				$instance = new PGsqlDAO();
-			}
-			return $instance;
-		}
-		
-		public function connect()
-		{
-			if($this->isConnected() == false)
-			{
-				$this->dbcnx = pg_connect("host=" . $this->dbserver . " port=5432 dbname=" . $this->dbname . " user=" . $this->dbuser ." password=" . $this->dbpass);
-			}
-			return $this->isConnected();
-		}
-		
-		public function isConnected()
-		{
-			$stat = pg_connection_status($this->dbcnx);
-			return ($stat === PGSQL_CONNECTION_OK);    
-		}
-		
-		public function insert($tableName, $ascArr)
-		{
-			$result = pg_insert($this->dbcnx, $tableName, $ascArr);
-			return ($result != null);
-		}
-		
-		public function update($tableName, $ascArr)
-		{
-			$result = pg_update($this->dbcnx, $tableName, $ascArr);
-			return ($result != null);
-		}
-		
-		public function select($tableName, $ascArr)
-		{
-			$result = pg_select($this->dbcnx, $tableName, $ascArr);
-			return $result;
-		}
-		
-		/* DISABLED FOR NOW */
-		/*public function delete($tableName, $ascArr)
-		{
-			$result = pg_update($this->dbcnx, $tableName, $ascArr);
-			return ($result != null);
-		}*/
-	}
-	
-	$instance = PGsqlDAO::getInstance();
-	/*
-	$instance->insert("user", array(
-				'username'=>"user4",
-				'first_name'=>"ittai",
-				'last_name'=>"yam",
-				'hashed_password'=>pg_unescape_bytea("2222"),
-				'email_address'=>"iy4@gmail.com"));
-	*/
-	$records = $instance->select("user", array('first_name'=>"ittai"));
-	foreach($records as $curr){
-		echo $curr['id']." ".$curr['username']."<br>";
-	}
-?>
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+  	<p id ="lng">name</p>
+  	<p id ="lat">name</p>
+<div id="map-canvas" style ="width : 720px; height : 720px;margin:0 auto"></div>
+  </body>
+</html>
