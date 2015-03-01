@@ -20,8 +20,6 @@
 			document.getElementById("lng").innerHTML = ""+e.latLng.lat();
 			document.getElementById("lat").innerHTML = ""+e.latLng.lng();
 			window.open("addSpot.php?lat="+e.latLng.lat()+"&&lng="+e.latLng.lng()+"");
-    //<?php> php scripit should placed here
-//<?>
   });
       }
       function placeMarker(position, map) {
