@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Add</title>
-  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css" />
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
 </head>
 <body>
   <div class="container">
@@ -13,7 +13,7 @@
    
     <br /><br /><br />
     <div class="col-sm-8">
-      <form action="http://localhost:80/addSpot.php" class="form-horizontal" method="post">
+      <form action="functions/addSpot.php" class="form-horizontal" method="post">
         <div class="form-group">
 	      <label for="spot-name" class="col-sm-2 control-label">Name:</label>
           <div class="col-sm-6" id="spot-name">
@@ -57,8 +57,8 @@
       <div id="map-canvas" style="width:500px; height:500px;"></div>
     </div>
   </div>
-  <script src="../js/jquery.js"></script>
-  <script src="../js/spot-add.js"></script> 
+  <script src="js/jquery.js"></script>
+  <script src="js/spot-add.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuT51pdC9Crt9R0MmhD-UMK_FYQUiHkNY"></script>
   <script type="text/javascript">  
   	google.maps.event.addDomListener(window, 'load', initialize);
