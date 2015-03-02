@@ -1,9 +1,8 @@
 <?php
 include_once "entities/IDBEntity.php";
-include_once "entities/Spot.php";
-include_once "entities/User.php";
 
-class PGsqlDAO {
+class PGsqlDAO
+{
     private $dbname = 'dc1672b9586skj';                                    //Name of the database
     private $dbuser = 'cjpuplxhiyanhv';                                    //Username for the db
     private $dbpass = '3190Aj5LPHYNDkhedIgjoAQF29';                        //Password for the db

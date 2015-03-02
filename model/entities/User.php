@@ -10,11 +10,11 @@ include_once 'IDBEntity.php';
 class User implements IDBEntity
 {
     private $id;
-    private $userName;
-    private $firstName;
-    private $lastName;
-    private $hashedPassword;
-    private $emailAddress;
+    private $username;
+    private $first_name;
+    private $last_name;
+    private $hashed_password;
+    private $email_address;
 
     /**
      * @return mixed
@@ -35,17 +35,17 @@ class User implements IDBEntity
     /**
      * @return mixed
      */
-    public function getUserName()
+    public function getUsername()
     {
-        return $this->userName;
+        return $this->username;
     }
 
     /**
-     * @param mixed $userName
+     * @param mixed $username
      */
-    public function setUserName($userName)
+    public function setUsername($username)
     {
-        $this->userName = $userName;
+        $this->username = $username;
     }
 
     /**
@@ -53,15 +53,15 @@ class User implements IDBEntity
      */
     public function getFirstName()
     {
-        return $this->firstName;
+        return $this->first_name;
     }
 
     /**
-     * @param mixed $firstName
+     * @param mixed $first_name
      */
-    public function setFirstName($firstName)
+    public function setFirstName($first_name)
     {
-        $this->firstName = $firstName;
+        $this->first_name = $first_name;
     }
 
     /**
@@ -69,15 +69,15 @@ class User implements IDBEntity
      */
     public function getLastName()
     {
-        return $this->lastName;
+        return $this->last_name;
     }
 
     /**
-     * @param mixed $lastName
+     * @param mixed $last_name
      */
-    public function setLastName($lastName)
+    public function setLastName($last_name)
     {
-        $this->lastName = $lastName;
+        $this->last_name = $last_name;
     }
 
     /**
@@ -85,15 +85,15 @@ class User implements IDBEntity
      */
     public function getHashedPassword()
     {
-        return $this->hashedPassword;
+        return $this->hashed_password;
     }
 
     /**
-     * @param mixed $hashedPassword
+     * @param mixed $hashed_password
      */
-    public function setHashedPassword($hashedPassword)
+    public function setHashedPassword($hashed_password)
     {
-        $this->hashedPassword = $hashedPassword;
+        $this->hashed_password = $hashed_password;
     }
 
     /**
@@ -101,15 +101,15 @@ class User implements IDBEntity
      */
     public function getEmailAddress()
     {
-        return $this->emailAddress;
+        return $this->email_address;
     }
 
     /**
-     * @param mixed $emailAddress
+     * @param mixed $email_address
      */
-    public function setEmailAddress($emailAddress)
+    public function setEmailAddress($email_address)
     {
-        $this->emailAddress = $emailAddress;
+        $this->email_address = $email_address;
     }
 
     function getAssociationArray()
@@ -120,25 +120,25 @@ class User implements IDBEntity
         {
             $assoArr['id'] = $this->id;
         }
-        if($this->userName !== null)
+        if($this->username !== null)
         {
-            $assoArr['username'] = $this->userName;
+            $assoArr['username'] = $this->username;
         }
-        if($this->firstName !== null)
+        if($this->first_name !== null)
         {
-            $assoArr['first_name'] = $this->firstName;
+            $assoArr['first_name'] = $this->first_name;
         }
-        if($this->lastName !== null)
+        if($this->last_name !== null)
         {
-            $assoArr['last_name'] = $this->lastName;
+            $assoArr['last_name'] = $this->last_name;
         }
-        if($this->hashedPassword !== null)
+        if($this->hashed_password !== null)
         {
-            $assoArr['hashed_password'] = $this->hashedPassword;
+            $assoArr['hashed_password'] = $this->hashed_password;
         }
-        if($this->emailAddress !== null)
+        if($this->email_address !== null)
         {
-            $assoArr['email_address'] = $this->emailAddress;
+            $assoArr['email_address'] = $this->email_address;
         }
 
         return $assoArr;

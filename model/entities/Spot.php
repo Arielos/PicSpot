@@ -7,14 +7,15 @@
  */
 include_once 'IDBEntity.php';
 
-class Spot implements IDBEntity{
+class Spot implements IDBEntity
+{
     private $id;
     private $coordinates;
     private $name;
     private $description;
     private $tips;
-    private $dateCreated;
-    private $creatorId;
+    private $date_created;
+    private $creator_id;
 
     /**
      * @return mixed
@@ -102,15 +103,15 @@ class Spot implements IDBEntity{
      */
     public function getDateCreated()
     {
-        return $this->dateCreated;
+        return $this->date_created;
     }
 
     /**
-     * @param mixed $dateCreated
+     * @param mixed $date_created
      */
-    public function setDateCreated($dateCreated)
+    public function setDateCreated($date_created)
     {
-        $this->dateCreated = $dateCreated;
+        $this->date_created = $date_created;
     }
 
     /**
@@ -118,17 +119,16 @@ class Spot implements IDBEntity{
      */
     public function getCreatorId()
     {
-        return $this->creatorId;
+        return $this->creator_id;
     }
 
     /**
-     * @param mixed $creatorId
+     * @param mixed $creator_id
      */
-    public function setCreatorId($creatorId)
+    public function setCreatorId($creator_id)
     {
-        $this->creatorId = $creatorId;
+        $this->creator_id = $creator_id;
     }
-
 
     function getAssociationArray()
     {
@@ -154,13 +154,13 @@ class Spot implements IDBEntity{
         {
             $assoArr['tips'] = $this->tips;
         }
-        if($this->dateCreated !== null)
+        if($this->date_created !== null)
         {
-            $assoArr['date_created'] = $this->dateCreated;
+            $assoArr['date_created'] = $this->date_created;
         }
-        if($this->creatorId !== null)
+        if($this->creator_id !== null)
         {
-            $assoArr['creator_id'] = $this->creatorId;
+            $assoArr['creator_id'] = $this->creator_id;
         }
 
         return $assoArr;

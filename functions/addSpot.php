@@ -1,4 +1,5 @@
 <?php
+include_once '../model/entities/Spot.php';
 include_once '../model/PGsqlDAO.php';
 
 $spotName = $_POST['spot-name'];
