@@ -14,6 +14,19 @@ class PGsqlDAO
         $this->connect();
     }
 
+    private function connect()
+    {
+        if ($this->isConnected() == false) {
+            $this->dbcnx = pg_connect("host=" . $this->dbserver . " port=5432 dbname=" . $this->dbname . " user=" . $this->dbuser . " password=" . $this->dbpass);
+        }
+        return $this->isConnected();
+    }
+
+    private function getEntityClassName(IDBEntity $entity)
+    {
+        return strtolower((new ReflectionClass($entity))->getName());
+    }
+
     public static function getInstance()
     {
         static $instance = null;
@@ -21,14 +34,6 @@ class PGsqlDAO
             $instance = new PGsqlDAO();
         }
         return $instance;
-    }
-
-    public function connect()
-    {
-        if ($this->isConnected() == false) {
-            $this->dbcnx = pg_connect("host=" . $this->dbserver . " port=5432 dbname=" . $this->dbname . " user=" . $this->dbuser . " password=" . $this->dbpass);
-        }
-        return $this->isConnected();
     }
 
     public function isConnected()
@@ -39,19 +44,19 @@ class PGsqlDAO
 
     public function insertNewEntity(IDBEntity $entity)
     {
-        $result = pg_insert($this->dbcnx, $entity->getEntityName(), $entity->getAssociationArray());
+        $result = pg_insert($this->dbcnx, $this->getEntityClassName($entity), $entity->getAssociationArray());
         return $result;
     }
 
     public function updateExistingEntity(IDBEntity $entity, IDBEntity $condition)
     {
-        $result = pg_update($this->dbcnx, $entity->getEntityName(), $entity->getAssociationArray(), $condition->getAssociationArray());
+        $result = pg_update($this->dbcnx, $this->getEntityClassName($entity), $entity->getAssociationArray(), $condition->getAssociationArray());
         return $result;
     }
 
     public function findEntitiesByValues(IDBEntity $condition)
     {
-        $result = pg_select($this->dbcnx, $condition->getEntityName(), $condition->getAssociationArray());
+        $result = pg_select($this->dbcnx, $this->getEntityClassName($condition), $condition->getAssociationArray());
         return $result;
     }
 

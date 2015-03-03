@@ -2,12 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Ittai
- * Date: 2/3/2015
- * Time: 11:33 PM
+ * Date: 3/3/2015
+ * Time: 4:07 PM
  */
-include_once 'IDBEntity.php';
+include_once('IDBEntity.php');
 
-class Category implements  IDBEntity
+class Tag implements IDBEntity
 {
     private $id;
     private $name;

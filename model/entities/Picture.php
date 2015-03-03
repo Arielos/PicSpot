@@ -147,9 +147,4 @@ class Picture implements IDBEntity
 
         return $assoArr;
     }
-
-    static function getEntityName()
-    {
-        return "picture";
-    }
 }

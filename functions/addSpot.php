@@ -17,11 +17,4 @@ $spot->setCoordinates($lng,$lat);
 $spot->setCreatorId(22222);
 $result = $instance->insertNewEntity($spot);
 print_r($result);
-
-/*
-$user = new User();
-$user->setFirstName("ittai");
-$users = $instance->findEntitiesByValues($user);
-print_r($users);
-*/
 ?>

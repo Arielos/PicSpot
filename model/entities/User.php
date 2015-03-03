@@ -143,9 +143,4 @@ class User implements IDBEntity
 
         return $assoArr;
     }
-
-    static function getEntityName()
-    {
-        return "user";
-    }
 }

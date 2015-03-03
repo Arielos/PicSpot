@@ -59,9 +59,4 @@ class PictureCategory implements IDBEntity
 
         return $assoArr;
     }
-
-    static function getEntityName()
-    {
-        return "picturecategory";
-    }
 }
