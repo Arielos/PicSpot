@@ -11,6 +11,44 @@ $(function() {
 			marker.setMap(null);
 		}
 	});
+
+	$("#submitbtn").bind("click", function(e) {
+
+		var spotName = $("input[name='spot-name']").val();
+		var spotDescription = $("#spotdescription").val();
+		var spotTips = $("#spottips").val();
+		var spotLat = marker.position.lat();
+		var spotLng = marker.position.lng();
+
+
+
+
+		e.preventDefault();
+		$.ajax({
+			url:'functions/addSpot.php',
+			type:'post',
+			data: {
+					'spot-name':spotName,
+					'spot-description':spotDescription,
+					'spot-tips':spotTips,
+					'spot-lat':spotLat,
+					'spot-lng':spotLng
+			},
+			success: function(data,status) {
+				if(data=="ok") {
+					alert(status);
+					//TODO
+				}
+				else{
+					alert("failure!");
+				}
+			},
+			error: function(xhr,desc,err){
+				console.log(xhr);
+				alert("Details" + err + desc);
+			}
+		});
+	});
 });
 
 function getDate() {
