@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ittai
- * Date: 3/3/2015
- * Time: 4:07 PM
- */
+
 include_once('IDBEntity.php');
 
 class Tag implements IDBEntity

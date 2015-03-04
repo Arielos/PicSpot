@@ -11,7 +11,7 @@ class comment implements IDBEntity
 {
     private $id;
     private $body;
-    private $commentor_id;
+    private $commenter_id;
     private $spot_id;
 
     /**
@@ -49,17 +49,17 @@ class comment implements IDBEntity
     /**
      * @return mixed
      */
-    public function getCommentorId()
+    public function getCommenterId()
     {
-        return $this->commentor_id;
+        return $this->commenter_id;
     }
 
     /**
-     * @param mixed $commentor_id
+     * @param mixed $commenter_id
      */
-    public function setCommentorId($commentor_id)
+    public function setCommenterId($commenter_id)
     {
-        $this->commentor_id = $commentor_id;
+        $this->commenter_id = $commenter_id;
     }
 
     /**
@@ -90,9 +90,9 @@ class comment implements IDBEntity
         {
             $assoArr['body'] = $this->body;
         }
-        if($this->commentor_id !== null)
+        if($this->commenter_id !== null)
         {
-            $assoArr['commentor_id'] = $this->commentor_id;
+            $assoArr['commenter_id'] = $this->commenter_id;
         }
         if($this->spot_id !== null)
         {

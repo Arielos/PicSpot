@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ittai
- * Date: 1/3/2015
- * Time: 7:51 PM
- */
+
 include_once 'IDBEntity.php';
 
 class Spot implements IDBEntity

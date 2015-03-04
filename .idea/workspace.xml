@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="783e3ca5-709e-4685-8a8b-2e374f99747e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/addUser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/getCategory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/getComment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/getPicture.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/getTag.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/getUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Comment.php" afterPath="$PROJECT_DIR$/model/entities/Comment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Picture.php" afterPath="$PROJECT_DIR$/model/entities/Picture.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Spot.php" afterPath="$PROJECT_DIR$/model/entities/Spot.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Tag.php" afterPath="$PROJECT_DIR$/model/entities/Tag.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/addSpot.php" afterPath="$PROJECT_DIR$/functions/addSpot.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/getSpot.php" afterPath="$PROJECT_DIR$/functions/getSpot.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/spot-get.js" afterPath="$PROJECT_DIR$/js/spot-get.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="picspotDemo.iws" />
     <ignored path=".idea/workspace.xml" />
