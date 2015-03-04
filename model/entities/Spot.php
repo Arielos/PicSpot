@@ -10,7 +10,8 @@ include_once 'IDBEntity.php';
 class Spot implements IDBEntity
 {
     private $id;
-    private $coordinates;
+    private $longitude;
+    private $latitude;
     private $name;
     private $description;
     private $tips;
@@ -36,18 +37,33 @@ class Spot implements IDBEntity
     /**
      * @return mixed
      */
-    public function getCoordinates()
+    public function getLongitude()
     {
-        return $this->coordinates;
+        return $this->longitude;
     }
 
     /**
-     * @param $lng
-     * @param $lat
+     * @param mixed $longitude
      */
-    public function setCoordinates($lng,$lat)
+    public function setLongitude($longitude)
     {
-        $this->coordinates = array('lng'=>$lng,'lat'=>$lat);
+        $this->longitude = $longitude;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @param mixed $latitude
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
     }
 
     /**
@@ -138,9 +154,13 @@ class Spot implements IDBEntity
         {
             $assoArr['id'] = $this->id;
         }
-        if($this->coordinates !== null)
+        if($this->longitude !== null)
         {
-            $assoArr['coordinates'] = $this->coordinates['lng'].",".$this->coordinates['lat'];
+            $assoArr['longitude'] = $this->longitude;
+        }
+        if($this->latitude !== null)
+        {
+            $assoArr['latitude'] = $this->latitude;
         }
         if($this->name !== null)
         {

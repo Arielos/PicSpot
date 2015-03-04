@@ -5,10 +5,10 @@ $(function() {
 
 function getSpot() {
 	var spotId = $("input[name='spot-id-to-get']").val();
-	
-	$.getJSON("resources/spots/" + spotId, function(data) {
+
+	$.getJSON("test.php?spot="+spotId, function(jsondata) {
 		var items = [];
-		$.each(data, function(key, val) {
+		$.each(jsondata, function(key, val) {
 			items.push("<li id='" + key + "'>" + val + "</li>");
 		});
 		$("<ul/>", {
