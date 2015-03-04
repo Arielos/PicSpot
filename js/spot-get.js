@@ -7,15 +7,20 @@ function getSpot() {
 	var spotId = $("input[name='spot-id-to-get']").val();
 
 	var data = {
-		'spot-id':spotId
+		'id':spotId
 	};
 	data = $(this).serialize() + "&" + $.param(data);
 	$.ajax({
 		url:'functions/getSpot.php',
-		type:'post',
+		type:'POST',
 		data: data,
+		dataType: 'json',
 		success: function(dat) {
-			alert(dat);
+			var toDisplay = "";
+			$.each(dat[0],function(key,val){
+				toDisplay += ""+key+" -> "+val +"\n";
+			});
+			alert(toDisplay);
 		},
 		error: function(xhr,desc,err){
 			console.log(xhr);
