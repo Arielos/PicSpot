@@ -15,8 +15,13 @@ $spot = new Spot();
 $spot->setName($spotName);
 $spot->setTips($spotTips);
 $spot->setDescription($spotDesc);
-$spot->setCoordinates($lng,$lat);
+$spot->setLongitude($lng);
+$spot->setLatitude($lat);
 $spot->setCreatorId(22222);
-$result = $instance->insertNewEntity($spot);
-echo "ok";
+try{
+    $result = $instance->insertNewEntity($spot);
+    echo "ok";
+}catch(Exception $e){
+    echo $e->getMessage();
+}
 ?>

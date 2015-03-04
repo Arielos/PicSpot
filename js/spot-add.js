@@ -1,9 +1,7 @@
 var marker = null;
 
 $(function() {
-	var dateTextField = $("input[name='spot-date-creation']");
-	dateTextField.val(getDate());
-	
+
 	$("button[name='clearBtn']").bind("click", function() {
 		$(":input[type='text']").val("");
 		$("textarea").val("");
@@ -19,9 +17,6 @@ $(function() {
 		var spotTips = $("#spottips").val();
 		var spotLat = marker.position.lat();
 		var spotLng = marker.position.lng();
-
-
-
 
 		e.preventDefault();
 		$.ajax({
@@ -40,7 +35,7 @@ $(function() {
 					//TODO
 				}
 				else{
-					alert("failure!");
+					alert(data);
 				}
 			},
 			error: function(xhr,desc,err){

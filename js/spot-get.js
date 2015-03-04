@@ -6,18 +6,35 @@ $(function() {
 function getSpot() {
 	var spotId = $("input[name='spot-id-to-get']").val();
 
-	$.getJSON("test.php?spot="+spotId, function(jsondata) {
+	var data = {
+		'spot-id':spotId
+	};
+	data = $(this).serialize() + "&" + $.param(data);
+	$.ajax({
+		url:'functions/getSpot.php',
+		type:'post',
+		data: data,
+		success: function(dat) {
+			alert(dat);
+		},
+		error: function(xhr,desc,err){
+			console.log(xhr);
+			alert("Details" + err + desc);
+		}
+	});
+
+	/*
+	$.getJSON("functions/getSpot.php?spot-id="+spotId, function(jsondata) {
 		var items = [];
-		$.each(jsondata, function(key, val) {
-			items.push("<li id='" + key + "'>" + val + "</li>");
-		});
+
 		$("<ul/>", {
 			"class": "my-new-list",
-			html: items.join("") 
+			html: items.join("")
 		}).appendTo("body");
 	}).fail(function() {
 		alert("Faild to get spot info " + spotId);
 	});
+	*/
 }
 
 function deleteSpot() {
