@@ -1,8 +1,7 @@
 var marker = null;
 
 $(function() {
-
-	$("button[name='clearBtn']").bind("click", function() {
+	$("#clearBtn").bind("click", function() {
 		$(":input[type='text']").val("");
 		$("textarea").val("");
 		if (marker != null) {
@@ -10,7 +9,7 @@ $(function() {
 		}
 	});
 
-	$("#submitbtn").bind("click", function(e) {
+	$("#submitBtn").bind("click", function(e) {
 
 		var spotName = $("input[name='spot-name']").val();
 		var spotDescription = $("#spotdescription").val();
@@ -32,10 +31,11 @@ $(function() {
 			success: function(data,status) {
 				if(data=="ok") {
 					alert(status);
-					//TODO
+					//TODO: add action for 'add' success
 				}
 				else{
-					alert(data);
+					alert("failure!");
+					//TODO: add action for 'add' fail
 				}
 			},
 			error: function(xhr,desc,err){
@@ -45,19 +45,6 @@ $(function() {
 		});
 	});
 });
-
-function getDate() {
-	var today = new Date();
-	var day = today.getDate();
-	var month = today.getMonth() + 1;
-	var year = today.getFullYear();
-
-	day = (day < 10) ? '0' + day : day;
-	month = (month < 10) ? '0' + month : month;
-	
-	today = day + '/' + month + '/' + year;
-	return today;
-}
 
 function initialize() {
 	var mapOptions = {
@@ -71,8 +58,6 @@ function initialize() {
 			marker.setMap(null);
 		}
 		marker = placeMarker(e.latLng, map);
-		$("input[name='lat']").val(e.latLng.lat());
-		$("input[name='lng']").val(e.latLng.lng());
 	});
 }
 
