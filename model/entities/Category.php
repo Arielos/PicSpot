@@ -6,6 +6,7 @@
  * Time: 11:33 PM
  */
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class Category implements  IDBEntity
 {
@@ -21,10 +22,12 @@ class Category implements  IDBEntity
     }
 
     /**
-     * @param mixed $id
+     * @param $id
+     * @throws exception
      */
     public function setId($id)
     {
+        InputChecker::isPositiveInteger($id, "Category id must not be null and must be a positive integer.");
         $this->id = $id;
     }
 
@@ -37,10 +40,12 @@ class Category implements  IDBEntity
     }
 
     /**
-     * @param mixed $name
+     * @param $name
+     * @throws exception
      */
     public function setName($name)
     {
+        InputChecker::isWhollyAlphabetic($name, "Category name must not be empty/null and must only consist of alphabetic characters.");
         $this->name = $name;
     }
 

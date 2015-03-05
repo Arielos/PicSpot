@@ -6,6 +6,7 @@
  * Time: 6:47 PM
  */
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class User implements IDBEntity
 {
@@ -25,10 +26,12 @@ class User implements IDBEntity
     }
 
     /**
-     * @param mixed $id
+     * @param $id
+     * @throws exception
      */
     public function setId($id)
     {
+        InputChecker::isPositiveInteger($id, "User id must not be null and must be a positive integer.");
         $this->id = $id;
     }
 
@@ -41,10 +44,12 @@ class User implements IDBEntity
     }
 
     /**
-     * @param mixed $username
+     * @param $username
+     * @throws exception
      */
     public function setUsername($username)
     {
+        InputChecker::isWhollyAlphabetic($username, "User username must not be empty/null and must only consist of alphanumeric characters.");
         $this->username = $username;
     }
 
@@ -105,10 +110,12 @@ class User implements IDBEntity
     }
 
     /**
-     * @param mixed $email_address
+     * @param $email_address
+     * @throws exception
      */
     public function setEmailAddress($email_address)
     {
+        InputChecker::isValidEmailAddress($email_address, "User email_address is either null or invalid.");
         $this->email_address = $email_address;
     }
 

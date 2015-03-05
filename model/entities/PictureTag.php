@@ -6,6 +6,7 @@
  * Time: 11:51 PM
  */
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class PictureTag implements IDBEntity
 {
@@ -21,10 +22,12 @@ class PictureTag implements IDBEntity
     }
 
     /**
-     * @param mixed $picture_id
+     * @param $picture_id
+     * @throws exception
      */
     public function setPictureId($picture_id)
     {
+        InputChecker::isPositiveInteger($picture_id, "PictureTag picture_id must not be null and must be a positive integer.");
         $this->picture_id = $picture_id;
     }
 
@@ -37,10 +40,12 @@ class PictureTag implements IDBEntity
     }
 
     /**
-     * @param mixed $tag_id
+     * @param $tag_id
+     * @throws exception
      */
     public function setTagId($tag_id)
     {
+        InputChecker::isPositiveInteger($tag_id, "PictureTag tag_id must not be null and must be a positive integer.");
         $this->tag_id = $tag_id;
     }
 

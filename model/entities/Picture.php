@@ -1,6 +1,7 @@
 <?php
 
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class Picture implements IDBEntity
 {
@@ -20,10 +21,12 @@ class Picture implements IDBEntity
     }
 
     /**
-     * @param mixed $id
+     * @param $id
+     * @throws exception
      */
     public function setId($id)
     {
+        InputChecker::isPositiveInteger($id, "Picture id must not be null and must be a positive integer.");
         $this->id = $id;
     }
 
@@ -84,10 +87,12 @@ class Picture implements IDBEntity
     }
 
     /**
-     * @param mixed $uploader_id
+     * @param $uploader_id
+     * @throws exception
      */
     public function setUploaderId($uploader_id)
     {
+        InputChecker::isPositiveInteger($uploader_id, "Picture uploader_id must not be null and must be a positive integer.");
         $this->uploader_id = $uploader_id;
     }
 
@@ -100,10 +105,12 @@ class Picture implements IDBEntity
     }
 
     /**
-     * @param mixed $spot_id
+     * @param $spot_id
+     * @throws exception
      */
     public function setSpotId($spot_id)
     {
+        InputChecker::isPositiveInteger($spot_id, "Picture spot_id must not be null and must be a positive integer.");
         $this->spot_id = $spot_id;
     }
 

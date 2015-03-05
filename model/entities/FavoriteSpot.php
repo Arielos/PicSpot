@@ -6,6 +6,7 @@
  * Time: 11:42 PM
  */
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class FavoriteSpot implements IDBEntity
 {
@@ -21,10 +22,12 @@ class FavoriteSpot implements IDBEntity
     }
 
     /**
-     * @param mixed $user_id
+     * @param $user_id
+     * @throws exception
      */
     public function setUserId($user_id)
     {
+        InputChecker::isPositiveInteger($user_id, "FavoriteSpot user_id must not be null and must be a positive integer.");
         $this->user_id = $user_id;
     }
 
@@ -37,10 +40,12 @@ class FavoriteSpot implements IDBEntity
     }
 
     /**
-     * @param mixed $spot_id
+     * @param $spot_id
+     * @throws exception
      */
     public function setSpotId($spot_id)
     {
+        InputChecker::isPositiveInteger($spot_id, "FavoriteSpot spot_id must not be null and must be a positive integer.");
         $this->spot_id = $spot_id;
     }
 

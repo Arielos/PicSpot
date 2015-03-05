@@ -6,6 +6,7 @@
  * Time: 11:44 PM
  */
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class PictureCategory implements IDBEntity
 {
@@ -21,10 +22,12 @@ class PictureCategory implements IDBEntity
     }
 
     /**
-     * @param mixed $picture_id
+     * @param $picture_id
+     * @throws exception
      */
     public function setPictureId($picture_id)
     {
+        InputChecker::isPositiveInteger($picture_id, "PictureCategory picture_id must not be null and must be a positive integer.");
         $this->picture_id = $picture_id;
     }
 
@@ -37,10 +40,12 @@ class PictureCategory implements IDBEntity
     }
 
     /**
-     * @param mixed $category_id
+     * @param $category_id
+     * @throws exception
      */
     public function setCategoryId($category_id)
     {
+        InputChecker::isPositiveInteger($category_id, "PictureCategory category_id must not be null and must be a positive integer.");
         $this->category_id = $category_id;
     }
 

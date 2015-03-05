@@ -1,6 +1,7 @@
 <?php
 
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class Spot implements IDBEntity
 {
@@ -22,10 +23,12 @@ class Spot implements IDBEntity
     }
 
     /**
-     * @param mixed $id
+     * @param $id
+     * @throws exception
      */
     public function setId($id)
     {
+        InputChecker::isPositiveInteger($id, "Spot id must not be null and must be a positive integer.");
         $this->id = $id;
     }
 
@@ -38,10 +41,12 @@ class Spot implements IDBEntity
     }
 
     /**
-     * @param mixed $longitude
+     * @param $longitude
+     * @throws exception
      */
     public function setLongitude($longitude)
     {
+        InputChecker::isNumeric($longitude, "Spot longitude must not be null and must be a numeric expression.");
         $this->longitude = $longitude;
     }
 
@@ -54,10 +59,12 @@ class Spot implements IDBEntity
     }
 
     /**
-     * @param mixed $latitude
+     * @param $latitude
+     * @throws exception
      */
     public function setLatitude($latitude)
     {
+        InputChecker::isNumeric($latitude, "Spot latitude must not be null and must be a numeric expression.");
         $this->latitude = $latitude;
     }
 
@@ -134,10 +141,12 @@ class Spot implements IDBEntity
     }
 
     /**
-     * @param mixed $creator_id
+     * @param $creator_id
+     * @throws exception
      */
     public function setCreatorId($creator_id)
     {
+        InputChecker::isPositiveInteger($creator_id, "Spot creator_id must not be null and must be a positive integer.");
         $this->creator_id = $creator_id;
     }
 

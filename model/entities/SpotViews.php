@@ -5,7 +5,8 @@
  * Date: 3/3/2015
  * Time: 4:02 PM
  */
-include_once('IDBEntity.php');
+include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class SpotViews implements IDBEntity
 {
@@ -22,10 +23,12 @@ class SpotViews implements IDBEntity
     }
 
     /**
-     * @param mixed $spot_id
+     * @param $spot_id
+     * @throws exception
      */
     public function setSpotId($spot_id)
     {
+        InputChecker::isPositiveInteger($spot_id, "SpotViews spot_id must not be null and must be a positive integer.");
         $this->spot_id = $spot_id;
     }
 
@@ -54,10 +57,12 @@ class SpotViews implements IDBEntity
     }
 
     /**
-     * @param mixed $count_of_views
+     * @param $count_of_views
+     * @throws exception
      */
     public function setCountOfViews($count_of_views)
     {
+        InputChecker::isPositiveInteger($count_of_views, "SpotViews count_of_views must not be null and must be a positive integer.");
         $this->count_of_views = $count_of_views;
     }
 

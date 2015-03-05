@@ -6,6 +6,7 @@
  * Time: 11:37 PM
  */
 include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class comment implements IDBEntity
 {
@@ -23,10 +24,12 @@ class comment implements IDBEntity
     }
 
     /**
-     * @param mixed $id
+     * @param $id
+     * @throws exception
      */
     public function setId($id)
     {
+        InputChecker::isPositiveInteger($id, "Comment id must not be null and must be a positive integer.");
         $this->id = $id;
     }
 
@@ -55,10 +58,12 @@ class comment implements IDBEntity
     }
 
     /**
-     * @param mixed $commenter_id
+     * @param $commenter_id
+     * @throws exception
      */
     public function setCommenterId($commenter_id)
     {
+        InputChecker::isPositiveInteger($commenter_id, "Comment commenter_id must not be null and must be a positive integer.");
         $this->commenter_id = $commenter_id;
     }
 
@@ -71,10 +76,12 @@ class comment implements IDBEntity
     }
 
     /**
-     * @param mixed $spot_id
+     * @param $spot_id
+     * @throws exception
      */
     public function setSpotId($spot_id)
     {
+        InputChecker::isPositiveInteger($spot_id, "Comment spot_id must not be null and must be a positive integer.");
         $this->spot_id = $spot_id;
     }
 

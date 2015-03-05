@@ -1,6 +1,7 @@
 <?php
 
-include_once('IDBEntity.php');
+include_once 'IDBEntity.php';
+include_once 'InputChecker.php';
 
 class Tag implements IDBEntity
 {
@@ -16,10 +17,12 @@ class Tag implements IDBEntity
     }
 
     /**
-     * @param mixed $id
+     * @param $id
+     * @throws exception
      */
     public function setId($id)
     {
+        InputChecker::isPositiveInteger($id, "Tag id must not be null and must be a positive integer.");
         $this->id = $id;
     }
 
