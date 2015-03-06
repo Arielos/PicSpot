@@ -27,7 +27,7 @@ class FavoriteSpot implements IDBEntity
      */
     public function setUserId($user_id)
     {
-        InputChecker::isPositiveInteger($user_id, "FavoriteSpot user_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($user_id, "FavoriteSpot user_id must not be null and must be a non-negative integer.");
         $this->user_id = $user_id;
     }
 
@@ -45,7 +45,7 @@ class FavoriteSpot implements IDBEntity
      */
     public function setSpotId($spot_id)
     {
-        InputChecker::isPositiveInteger($spot_id, "FavoriteSpot spot_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($spot_id, "FavoriteSpot spot_id must not be null and must be a non-negative integer.");
         $this->spot_id = $spot_id;
     }
 

@@ -31,7 +31,7 @@ class User implements IDBEntity
      */
     public function setId($id)
     {
-        InputChecker::isPositiveInteger($id, "User id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($id, "User id must not be null and must be a non-negative integer.");
         $this->id = $id;
     }
 
@@ -49,7 +49,7 @@ class User implements IDBEntity
      */
     public function setUsername($username)
     {
-        InputChecker::isWhollyAlphabetic($username, "User username must not be empty/null and must only consist of alphanumeric characters.");
+        InputChecker::isAlphaNumeric($username, "User username must not be empty/null and must only consist of alphanumeric characters.");
         $this->username = $username;
     }
 
@@ -66,6 +66,7 @@ class User implements IDBEntity
      */
     public function setFirstName($first_name)
     {
+        $first_name = htmlentities($first_name,ENT_HTML5);
         $this->first_name = $first_name;
     }
 
@@ -82,6 +83,7 @@ class User implements IDBEntity
      */
     public function setLastName($last_name)
     {
+        $last_name = htmlentities($last_name,ENT_HTML5);
         $this->last_name = $last_name;
     }
 

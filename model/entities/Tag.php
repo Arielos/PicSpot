@@ -22,7 +22,7 @@ class Tag implements IDBEntity
      */
     public function setId($id)
     {
-        InputChecker::isPositiveInteger($id, "Tag id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($id, "Tag id must not be null and must be a non-negative integer.");
         $this->id = $id;
     }
 
@@ -39,6 +39,7 @@ class Tag implements IDBEntity
      */
     public function setName($name)
     {
+        $name = htmlentities($name,ENT_HTML5);
         $this->name = $name;
     }
 

@@ -28,7 +28,7 @@ class SpotCategoryVote implements IDBEntity
      */
     public function setUserId($user_id)
     {
-        InputChecker::isPositiveInteger($user_id, "SpotCategoryVote user_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($user_id, "SpotCategoryVote user_id must not be null and must be a non-negative integer.");
         $this->user_id = $user_id;
     }
 
@@ -46,7 +46,7 @@ class SpotCategoryVote implements IDBEntity
      */
     public function setSpotId($spot_id)
     {
-        InputChecker::isPositiveInteger($spot_id, "SpotCategoryVote spot_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($spot_id, "SpotCategoryVote spot_id must not be null and must be a non-negative integer.");
         $this->spot_id = $spot_id;
     }
 
@@ -64,7 +64,7 @@ class SpotCategoryVote implements IDBEntity
      */
     public function setCategoryId($category_id)
     {
-        InputChecker::isPositiveInteger($category_id, "SpotCategoryVote category_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($category_id, "SpotCategoryVote category_id must not be null and must be a non-negative integer.");
         $this->category_id = $category_id;
     }
 

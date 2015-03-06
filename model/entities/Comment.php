@@ -29,7 +29,7 @@ class comment implements IDBEntity
      */
     public function setId($id)
     {
-        InputChecker::isPositiveInteger($id, "Comment id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($id, "Comment id must not be null and must be a non-negative integer.");
         $this->id = $id;
     }
 
@@ -46,6 +46,7 @@ class comment implements IDBEntity
      */
     public function setBody($body)
     {
+        $body = htmlentities($body,ENT_HTML5);
         $this->body = $body;
     }
 
@@ -63,7 +64,7 @@ class comment implements IDBEntity
      */
     public function setCommenterId($commenter_id)
     {
-        InputChecker::isPositiveInteger($commenter_id, "Comment commenter_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($commenter_id, "Comment commenter_id must not be null and must be a non-negative integer.");
         $this->commenter_id = $commenter_id;
     }
 
@@ -81,7 +82,7 @@ class comment implements IDBEntity
      */
     public function setSpotId($spot_id)
     {
-        InputChecker::isPositiveInteger($spot_id, "Comment spot_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($spot_id, "Comment spot_id must not be null and must be a non-negative integer.");
         $this->spot_id = $spot_id;
     }
 

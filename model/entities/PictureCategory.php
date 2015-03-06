@@ -27,7 +27,7 @@ class PictureCategory implements IDBEntity
      */
     public function setPictureId($picture_id)
     {
-        InputChecker::isPositiveInteger($picture_id, "PictureCategory picture_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($picture_id, "PictureCategory picture_id must not be null and must be a non-negative integer.");
         $this->picture_id = $picture_id;
     }
 
@@ -45,7 +45,7 @@ class PictureCategory implements IDBEntity
      */
     public function setCategoryId($category_id)
     {
-        InputChecker::isPositiveInteger($category_id, "PictureCategory category_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($category_id, "PictureCategory category_id must not be null and must be a non-negative integer.");
         $this->category_id = $category_id;
     }
 

@@ -28,7 +28,7 @@ class Spot implements IDBEntity
      */
     public function setId($id)
     {
-        InputChecker::isPositiveInteger($id, "Spot id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($id, "Spot id must not be null and must be a non-negative integer.");
         $this->id = $id;
     }
 
@@ -81,6 +81,7 @@ class Spot implements IDBEntity
      */
     public function setName($name)
     {
+        $name = htmlentities($name,ENT_HTML5);
         $this->name = $name;
     }
 
@@ -97,6 +98,7 @@ class Spot implements IDBEntity
      */
     public function setDescription($description)
     {
+        $description = htmlentities($description,ENT_HTML5);
         $this->description = $description;
     }
 
@@ -113,6 +115,7 @@ class Spot implements IDBEntity
      */
     public function setTips($tips)
     {
+        $tips = htmlentities($tips,ENT_HTML5);
         $this->tips = $tips;
     }
 
@@ -146,7 +149,7 @@ class Spot implements IDBEntity
      */
     public function setCreatorId($creator_id)
     {
-        InputChecker::isPositiveInteger($creator_id, "Spot creator_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($creator_id, "Spot creator_id must not be null and must be a non-negative integer.");
         $this->creator_id = $creator_id;
     }
 

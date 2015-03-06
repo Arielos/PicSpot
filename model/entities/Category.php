@@ -27,7 +27,7 @@ class Category implements  IDBEntity
      */
     public function setId($id)
     {
-        InputChecker::isPositiveInteger($id, "Category id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($id, "Category id must not be null and must be a non-negative integer.");
         $this->id = $id;
     }
 
@@ -46,6 +46,7 @@ class Category implements  IDBEntity
     public function setName($name)
     {
         InputChecker::isWhollyAlphabetic($name, "Category name must not be empty/null and must only consist of alphabetic characters.");
+        $name = htmlentities($name,ENT_HTML5);
         $this->name = $name;
     }
 

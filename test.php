@@ -10,20 +10,21 @@ include_once 'model/PGsqlDAO.php';
 $instance = PGsqlDAO::getInstance();
 
 $spot = new Spot();
-$spot->setId("");
-$spots = $instance->findEntitiesByValues($spot);
-foreach($spots as $curr){
-    print_r($curr);
-    echo "<br>";
+//$spot->setCreatorId(22222);
+//$spot->setName("NewSpot002");
+
+
+$spots = $instance->findEntitiesByValues($spot,0,100);
+if($spots == null){
+    echo "empty";
+}else{
+    foreach($spots as $curr) {
+        print_r($curr);
+        echo "<br>";
+    }
 }
 
-/*
-header("content-type:text/json");
-$val = array('name'=>"ittai",'proffession'=>'student');
-
-if($_REQUEST)
-if($_GET['spot']=="1"){
-    echo json_encode($val);
-    exit();
-}
-*/
+$spot_old = new Spot();
+$spot->setName("");
+$spot->setDescription("");
+echo $instance->updateExistingEntity($spot,$spot_old);

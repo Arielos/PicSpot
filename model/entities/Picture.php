@@ -26,7 +26,7 @@ class Picture implements IDBEntity
      */
     public function setId($id)
     {
-        InputChecker::isPositiveInteger($id, "Picture id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($id, "Picture id must not be null and must be a non-negative integer.");
         $this->id = $id;
     }
 
@@ -43,6 +43,7 @@ class Picture implements IDBEntity
      */
     public function setName($name)
     {
+        $name = htmlentities($name,ENT_HTML5);
         $this->name = $name;
     }
 
@@ -92,7 +93,7 @@ class Picture implements IDBEntity
      */
     public function setUploaderId($uploader_id)
     {
-        InputChecker::isPositiveInteger($uploader_id, "Picture uploader_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($uploader_id, "Picture uploader_id must not be null and must be a non-negative integer.");
         $this->uploader_id = $uploader_id;
     }
 

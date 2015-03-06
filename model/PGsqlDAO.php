@@ -1,5 +1,6 @@
 <?php
 include_once "entities/IDBEntity.php";
+include_once "entities/InputChecker.php";
 
 class PGsqlDAO
 {
@@ -48,21 +49,33 @@ class PGsqlDAO
         return $result;
     }
 
-    public function updateExistingEntity(IDBEntity $entity, IDBEntity $condition)
+    public function updateExistingEntity(IDBEntity $data, IDBEntity $condition)
     {
-        $result = pg_update($this->dbcnx, $this->getEntityClassName($entity), $entity->getAssociationArray(), $condition->getAssociationArray());
-        return $result;
-    }
-
-    public function findEntitiesByValues(IDBEntity $condition)
-    {
-        $result = pg_select($this->dbcnx, $this->getEntityClassName($condition), $condition->getAssociationArray());
+        $result = pg_update($this->dbcnx, $this->getEntityClassName($data), $data->getAssociationArray(), $condition->getAssociationArray());
         return $result;
     }
 
     public function findSpotsByRadius($coordinates, $radius)
     {
         // TODO
+    }
+
+    public function findEntitiesByValues(IDBEntity $entity, $offset = 0, $limit = 1)
+    {
+        InputChecker::isNonNegativeInteger($offset,"PGSqlDAO findEntitiesByValues rowNumber must be a non-negative integer.");
+        InputChecker::isNonNegativeInteger($limit,"PGSqlDAO findEntitiesByValues limit must be a non-negative integer.");
+
+        $parameters = "WHERE true";
+        foreach($entity->getAssociationArray() as $key=>$value){
+            if(is_string($value)){
+                $parameters .= " AND {$key}='{$value}'";
+            } else {
+                $parameters .= " AND {$key}={$value}";
+            }
+        }
+        $query = "SELECT * FROM {$this->getEntityClassName($entity)} {$parameters} OFFSET {$offset} LIMIT {$limit}";
+        $result = pg_query($this->dbcnx,$query);
+        return pg_fetch_all($result);
     }
 
     /* DISABLED FOR NOW */

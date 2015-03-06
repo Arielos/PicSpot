@@ -28,7 +28,7 @@ class SpotViews implements IDBEntity
      */
     public function setSpotId($spot_id)
     {
-        InputChecker::isPositiveInteger($spot_id, "SpotViews spot_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($spot_id, "SpotViews spot_id must not be null and must be a non-negative integer.");
         $this->spot_id = $spot_id;
     }
 
@@ -62,7 +62,7 @@ class SpotViews implements IDBEntity
      */
     public function setCountOfViews($count_of_views)
     {
-        InputChecker::isPositiveInteger($count_of_views, "SpotViews count_of_views must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($count_of_views, "SpotViews count_of_views must not be null and must be a non-negative integer.");
         $this->count_of_views = $count_of_views;
     }
 

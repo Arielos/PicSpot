@@ -27,7 +27,7 @@ class PictureTag implements IDBEntity
      */
     public function setPictureId($picture_id)
     {
-        InputChecker::isPositiveInteger($picture_id, "PictureTag picture_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($picture_id, "PictureTag picture_id must not be null and must be a non-negative integer.");
         $this->picture_id = $picture_id;
     }
 
@@ -45,7 +45,7 @@ class PictureTag implements IDBEntity
      */
     public function setTagId($tag_id)
     {
-        InputChecker::isPositiveInteger($tag_id, "PictureTag tag_id must not be null and must be a positive integer.");
+        InputChecker::isNonNegativeInteger($tag_id, "PictureTag tag_id must not be null and must be a non-negative integer.");
         $this->tag_id = $tag_id;
     }
 

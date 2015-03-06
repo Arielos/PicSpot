@@ -13,8 +13,8 @@ class InputChecker {
      * @return bool
      * @throws exception
      */
-    static function isPositiveInteger($val, $exception_msg = ""){
-        if(isset($val)?(is_int($val)?($val > 0):false):false) {
+    static function isNonNegativeInteger($val, $exception_msg = ""){
+        if(isset($val)?(is_int($val)?($val >= 0):false):false) {
             return true;
         } else {
             if($exception_msg === ""){
