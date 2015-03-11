@@ -11,6 +11,9 @@ if(isset($_POST['id'])){
 if(isset($_POST['creator_id'])){
     $spot->setCreatorId($_POST['creator_id']);
 }
+if(isset($_POST['category_id'])){
+    $spot->setCategoryId($_POST['category_id']);
+}
 
 $instance = PGsqlDAO::getInstance();
 $result = $instance->findEntitiesByValues($spot);

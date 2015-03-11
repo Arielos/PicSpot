@@ -8,29 +8,10 @@
 include_once 'IDBEntity.php';
 include_once 'InputChecker.php';
 
-class SpotCategoryVote implements IDBEntity
+class SpotCategory implements IDBEntity
 {
-    private $user_id;
     private $spot_id;
     private $category_id;
-
-    /**
-     * @return mixed
-     */
-    public function getUserId()
-    {
-        return $this->user_id;
-    }
-
-    /**
-     * @param $user_id
-     * @throws exception
-     */
-    public function setUserId($user_id)
-    {
-        InputChecker::isNonNegativeInteger($user_id, "SpotCategoryVote user_id must not be null and must be a non-negative integer.");
-        $this->user_id = $user_id;
-    }
 
     /**
      * @return mixed
@@ -72,10 +53,6 @@ class SpotCategoryVote implements IDBEntity
     {
         $assoArr = array();
 
-        if($this->user_id !== null)
-        {
-            $assoArr['user_id'] = $this->user_id;
-        }
         if($this->spot_id !== null)
         {
             $assoArr['spot_id'] = $this->spot_id;
