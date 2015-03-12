@@ -1,34 +1,29 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ittai
- * Date: 2/3/2015
- * Time: 11:42 PM
- */
-include_once 'IDBEntity.php';
-include_once 'InputChecker.php';
+
+include_once '/../IDBEntity.php';
+include_once '/../InputChecker.php';
 
 class FavoriteSpot implements IDBEntity
 {
-    private $user_id;
+    private $account_id;
     private $spot_id;
 
     /**
      * @return mixed
      */
-    public function getUserId()
+    public function getAccountId()
     {
-        return $this->user_id;
+        return $this->account_id;
     }
 
     /**
-     * @param $user_id
+     * @param $account_id
      * @throws exception
      */
-    public function setUserId($user_id)
+    public function setAccountId($account_id)
     {
-        InputChecker::isNonNegativeInteger($user_id, "FavoriteSpot user_id must not be null and must be a non-negative integer.");
-        $this->user_id = $user_id;
+        InputChecker::isNonNegativeInteger($account_id, "FavoriteSpot account_id must not be null and must be a non-negative integer.");
+        $this->account_id = $account_id;
     }
 
     /**
@@ -53,9 +48,9 @@ class FavoriteSpot implements IDBEntity
     {
         $assoArr = array();
 
-        if($this->user_id !== null)
+        if($this->account_id !== null)
         {
-            $assoArr['user_id'] = $this->user_id;
+            $assoArr['account_id'] = $this->account_id;
         }
         if($this->spot_id !== null)
         {

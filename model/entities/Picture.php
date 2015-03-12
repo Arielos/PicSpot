@@ -1,13 +1,13 @@
 <?php
 
-include_once 'IDBEntity.php';
-include_once 'InputChecker.php';
+include_once '/../IDBEntity.php';
+include_once '/../InputChecker.php';
 
 class Picture implements IDBEntity
 {
     private $id;
     private $name;
-    private $filename;
+    private $URL;
     private $date_created;
     private $uploader_id;
     private $spot_id;
@@ -50,17 +50,17 @@ class Picture implements IDBEntity
     /**
      * @return mixed
      */
-    public function getFilename()
+    public function getURL()
     {
-        return $this->filename;
+        return $this->URL;
     }
 
     /**
-     * @param mixed $filename
+     * @param mixed $URL
      */
-    public function setFilename($filename)
+    public function setURL($URL)
     {
-        $this->filename = $filename;
+        $this->URL = $URL;
     }
 
     /**
@@ -127,9 +127,9 @@ class Picture implements IDBEntity
         {
             $assoArr['name'] = $this->name;
         }
-        if($this->filename !== null)
+        if($this->URL !== null)
         {
-            $assoArr['filename'] = $this->filename;
+            $assoArr['URL'] = $this->URL;
         }
         if($this->date_created !== null)
         {

@@ -16,6 +16,7 @@ $(function() {
 		var spotTips = $("#spottips").val();
 		var spotLat = marker.position.lat();
 		var spotLng = marker.position.lng();
+		var categoryId = $("input[name='category-id']").val();
 
 		e.preventDefault();
 		$.ajax({

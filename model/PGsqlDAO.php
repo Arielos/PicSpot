@@ -1,6 +1,6 @@
 <?php
-include_once "entities/IDBEntity.php";
-include_once "entities/InputChecker.php";
+include_once "IDBEntity.php";
+include_once "InputChecker.php";
 
 class PGsqlDAO
 {
@@ -62,7 +62,7 @@ class PGsqlDAO
 
     public function findEntitiesByValues(IDBEntity $entity, $offset = 0, $limit = 1)
     {
-        InputChecker::isNonNegativeInteger($offset,"PGSqlDAO findEntitiesByValues rowNumber must be a non-negative integer.");
+        InputChecker::isNonNegativeInteger($offset,"PGSqlDAO findEntitiesByValues offset must be a non-negative integer.");
         InputChecker::isNonNegativeInteger($limit,"PGSqlDAO findEntitiesByValues limit must be a non-negative integer.");
 
         $parameters = "WHERE true";
@@ -75,7 +75,7 @@ class PGsqlDAO
         }
         $query = "SELECT * FROM {$this->getEntityClassName($entity)} {$parameters} OFFSET {$offset} LIMIT {$limit}";
         $result = pg_query($this->dbcnx,$query);
-        return pg_fetch_all($result);
+        return $result ? pg_fetch_all($result) : null;
     }
 
     /* DISABLED FOR NOW */

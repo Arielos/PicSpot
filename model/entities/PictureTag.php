@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ittai
- * Date: 2/3/2015
- * Time: 11:51 PM
- */
-include_once 'IDBEntity.php';
-include_once 'InputChecker.php';
+
+include_once '/../IDBEntity.php';
+include_once '/../InputChecker.php';
 
 class PictureTag implements IDBEntity
 {

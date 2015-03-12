@@ -1,7 +1,7 @@
 <?php
 
-include_once 'IDBEntity.php';
-include_once 'InputChecker.php';
+include_once '/../IDBEntity.php';
+include_once '/../InputChecker.php';
 
 class Tag implements IDBEntity
 {

@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="783e3ca5-709e-4685-8a8b-2e374f99747e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\picspotDemo\model\entities\PictureCategory.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\picspotDemo\model\entities\SpotCategoryVote.php" afterPath="$PROJECT_DIR$/model/entities/SpotCategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/PasswordHasher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\picspotDemo\functions\addUser.php" afterPath="$PROJECT_DIR$/functions/addAccount.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\picspotDemo\functions\getUser.php" afterPath="$PROJECT_DIR$/functions/getAccount.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\picspotDemo\model\entities\IDBEntity.php" afterPath="$PROJECT_DIR$/model/IDBEntity.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\picspotDemo\model\entities\InputChecker.php" afterPath="$PROJECT_DIR$/model/InputChecker.php" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\picspotDemo\model\entities\User.php" afterPath="$PROJECT_DIR$/model/entities/Account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Category.php" afterPath="$PROJECT_DIR$/model/entities/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Comment.php" afterPath="$PROJECT_DIR$/model/entities/Comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/FavoriteSpot.php" afterPath="$PROJECT_DIR$/model/entities/FavoriteSpot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/PGsqlDAO.php" afterPath="$PROJECT_DIR$/model/PGsqlDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Picture.php" afterPath="$PROJECT_DIR$/model/entities/Picture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/PictureTag.php" afterPath="$PROJECT_DIR$/model/entities/PictureTag.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Spot.php" afterPath="$PROJECT_DIR$/model/entities/Spot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/SpotCategory.php" afterPath="$PROJECT_DIR$/model/entities/SpotCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/SpotViews.php" afterPath="$PROJECT_DIR$/model/entities/SpotViews.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/entities/Tag.php" afterPath="$PROJECT_DIR$/model/entities/Tag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add.html" afterPath="$PROJECT_DIR$/add.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/addSpot.php" afterPath="$PROJECT_DIR$/functions/addSpot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/getCategory.php" afterPath="$PROJECT_DIR$/functions/getCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/getComment.php" afterPath="$PROJECT_DIR$/functions/getComment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/getPicture.php" afterPath="$PROJECT_DIR$/functions/getPicture.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/getSpot.php" afterPath="$PROJECT_DIR$/functions/getSpot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/getTag.php" afterPath="$PROJECT_DIR$/functions/getTag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/spot-add.js" afterPath="$PROJECT_DIR$/js/spot-add.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="picspotDemo.iws" />
@@ -56,34 +77,40 @@
         <option value="$PROJECT_DIR$/model/entities/comment.php" />
         <option value="$PROJECT_DIR$/model/entities/IDBEntity.php" />
         <option value="$PROJECT_DIR$/get.html" />
-        <option value="$PROJECT_DIR$/js/spot-add.js" />
         <option value="$PROJECT_DIR$/js/spot-get.js" />
         <option value="$PROJECT_DIR$/functions/getEntity.php" />
         <option value="$PROJECT_DIR$/functions/addUser.php" />
+        <option value="$PROJECT_DIR$/model/entities/PictureCategory.php" />
+        <option value="$PROJECT_DIR$/js/spot-add-images.js" />
+        <option value="$PROJECT_DIR$/model/entities/SpotCategoryVote.php" />
         <option value="$PROJECT_DIR$/functions/getCategory.php" />
         <option value="$PROJECT_DIR$/functions/getComment.php" />
         <option value="$PROJECT_DIR$/functions/getPicture.php" />
+        <option value="$PROJECT_DIR$/functions/getSpot.php" />
         <option value="$PROJECT_DIR$/functions/getTag.php" />
         <option value="$PROJECT_DIR$/functions/getUser.php" />
-        <option value="$PROJECT_DIR$/model/InputChecker.php" />
         <option value="$PROJECT_DIR$/model/entities/InputChecker.php" />
-        <option value="$PROJECT_DIR$/model/entities/User.php" />
-        <option value="$PROJECT_DIR$/model/entities/Tag.php" />
-        <option value="$PROJECT_DIR$/model/entities/SpotViews.php" />
-        <option value="$PROJECT_DIR$/model/entities/PictureTag.php" />
-        <option value="$PROJECT_DIR$/model/entities/PictureCategory.php" />
-        <option value="$PROJECT_DIR$/model/entities/Picture.php" />
-        <option value="$PROJECT_DIR$/model/entities/FavoriteSpot.php" />
-        <option value="$PROJECT_DIR$/model/entities/Comment.php" />
-        <option value="$PROJECT_DIR$/model/entities/Category.php" />
-        <option value="$PROJECT_DIR$/js/spot-add-images.js" />
+        <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/add.html" />
-        <option value="$PROJECT_DIR$/model/PGsqlDAO.php" />
+        <option value="$PROJECT_DIR$/model/InputChecker.php" />
+        <option value="$PROJECT_DIR$/model/entities/Tag.php" />
+        <option value="$PROJECT_DIR$/model/entities/User.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/model/entities/SpotCategoryVote.php" />
-        <option value="$PROJECT_DIR$/model/entities/Spot.php" />
+        <option value="$PROJECT_DIR$/functions/getAccount.php" />
+        <option value="$PROJECT_DIR$/model/entities/Category.php" />
+        <option value="$PROJECT_DIR$/model/entities/Comment.php" />
+        <option value="$PROJECT_DIR$/model/entities/FavoriteSpot.php" />
+        <option value="$PROJECT_DIR$/model/entities/PictureTag.php" />
+        <option value="$PROJECT_DIR$/model/entities/SpotCategory.php" />
+        <option value="$PROJECT_DIR$/model/entities/SpotViews.php" />
+        <option value="$PROJECT_DIR$/model/PasswordHasher.php" />
+        <option value="$PROJECT_DIR$/model/entities/Account.php" />
+        <option value="$PROJECT_DIR$/functions/addAccount.php" />
+        <option value="$PROJECT_DIR$/model/PGsqlDAO.php" />
+        <option value="$PROJECT_DIR$/js/spot-add.js" />
+        <option value="$PROJECT_DIR$/model/entities/Picture.php" />
         <option value="$PROJECT_DIR$/functions/addSpot.php" />
-        <option value="$PROJECT_DIR$/functions/getSpot.php" />
+        <option value="$PROJECT_DIR$/model/entities/Spot.php" />
       </list>
     </option>
   </component>
@@ -92,9 +119,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="336" />
-    <option name="width" value="1344" />
-    <option name="height" value="1010" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -119,7 +147,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,20 +207,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="picspotDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="picspotDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="functions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -214,6 +227,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,19 +253,26 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="919" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\picspotDemo\functions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\picspotDemo\model" />
       <recent name="C:\xampp\htdocs\picspotDemo\model\entities" />
       <recent name="C:\xampp\htdocs\picspotDemo" />
       <recent name="C:\xampp\htdocs\picspotDemo\functions" />
-      <recent name="C:\xampp\htdocs\picspotDemo\model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.add.html">
+    <configuration default="false" name="add.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/picspotDemo/add.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -266,9 +287,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -277,7 +295,17 @@
       <envs />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.add.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.add.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -292,30 +320,50 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="336" y="0" width="1344" height="1010" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293348" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53717947" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21417445" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293348" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1705379" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -342,13 +390,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/get.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="714">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="578">
@@ -462,13 +503,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1425668279494" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..this_getEntityClassName_entity_..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/IDBEntity.php">
+    <entry file="file://$PROJECT_DIR$/model/IDBEntity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="32" />
@@ -486,13 +525,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1425668279494" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..this_getEntityClassName_entity_..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/IDBEntity.php">
+    <entry file="file://$PROJECT_DIR$/model/IDBEntity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="32" />
@@ -520,189 +557,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="853">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getComment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26309523" vertical-offset="0" max-vertical-offset="840">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20238096" vertical-offset="0" max-vertical-offset="840">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6797619" vertical-offset="1880" max-vertical-offset="2720">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/Tag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22142857" vertical-offset="222" max-vertical-offset="1122">
-          <caret line="24" column="99" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/SpotViews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84880954" vertical-offset="681" max-vertical-offset="1581">
-          <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/PictureTag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84880954" vertical-offset="324" max-vertical-offset="1224">
-          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/Picture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41309524" vertical-offset="1846" max-vertical-offset="2686">
-          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/IDBEntity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060714286" vertical-offset="0" max-vertical-offset="840">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/InputChecker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7702381" vertical-offset="817" max-vertical-offset="1683">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/FavoriteSpot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4642857" vertical-offset="324" max-vertical-offset="1224">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39285713" vertical-offset="1149" max-vertical-offset="1989">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41309524" vertical-offset="401" max-vertical-offset="1241">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/spot-add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.058891457" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.547763" vertical-offset="295" max-vertical-offset="1139">
-          <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getTag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20238096" vertical-offset="0" max-vertical-offset="840">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state vertical-scroll-proportion="-19.615385" vertical-offset="289" max-vertical-offset="1224">
+          <caret line="47" column="89" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getUser.php">
+    <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="840">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="306">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="3" column="25675" selection-start-line="3" selection-start-column="25675" selection-end-line="3" selection-end-column="25675" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="595">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state vertical-scroll-proportion="-12.461538" vertical-offset="288" max-vertical-offset="833">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/PGsqlDAO.php">
+    <entry file="file://$PROJECT_DIR$/functions/getAccount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.807692" vertical-offset="656" max-vertical-offset="1547">
-          <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
-          <folding>
-            <marker date="1425668279494" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..this_getEntityClassName_entity_..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/SpotCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="629">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/addSpot.php">
+    <entry file="file://$PROJECT_DIR$/functions/getCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.082424246" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="425">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/entities/Spot.php">
+    <entry file="file://$PROJECT_DIR$/functions/getComment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67030305" vertical-offset="2864" max-vertical-offset="3757">
-          <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="493">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/getSpot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2060606" vertical-offset="0" max-vertical-offset="825">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="493">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/addUser.php">
+    <entry file="file://$PROJECT_DIR$/functions/getTag.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22666667" vertical-offset="0" max-vertical-offset="825">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="425">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/FavoriteSpot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/PictureTag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/SpotCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/IDBEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="170">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/InputChecker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PasswordHasher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03119266" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/addAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12477064" vertical-offset="0" max-vertical-offset="782">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33211008" vertical-offset="1995" max-vertical-offset="2635">
+          <caret line="128" column="22" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1218638" vertical-offset="0" max-vertical-offset="558">
+          <caret line="4" column="4263" selection-start-line="4" selection-start-column="4263" selection-end-line="4" selection-end-column="4263" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.99816513" vertical-offset="561" max-vertical-offset="1904">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03119266" vertical-offset="34" max-vertical-offset="1122">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/SpotViews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03119266" vertical-offset="0" max-vertical-offset="1496">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/spot-add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05773672" vertical-offset="443" max-vertical-offset="1309">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PGsqlDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6154762" vertical-offset="707" max-vertical-offset="1547">
+          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+          <folding>
+            <marker date="1426162355448" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..this_getEntityClassName_entity_..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/Picture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5807645" vertical-offset="549" max-vertical-offset="2686">
+          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/entities/Spot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1011904" vertical-offset="2305" max-vertical-offset="3400">
+          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/addSpot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8095238" vertical-offset="0" max-vertical-offset="986">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/getPicture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2678788" vertical-offset="0" max-vertical-offset="825">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.08095238" vertical-offset="0" max-vertical-offset="840">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding />
         </state>
       </provider>

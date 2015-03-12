@@ -1,7 +1,7 @@
 <?php
 
-include_once 'IDBEntity.php';
-include_once 'InputChecker.php';
+include_once '/../IDBEntity.php';
+include_once '/../InputChecker.php';
 
 class Spot implements IDBEntity
 {
@@ -13,15 +13,6 @@ class Spot implements IDBEntity
     private $tips;
     private $date_created;
     private $creator_id;
-    private $category_id;
-
-    /**
-     * @param mixed $category_id
-     */
-    public function setCategoryId($category_id)
-    {
-        $this->category_id = $category_id;
-    }
 
     /**
      * @return mixed
@@ -162,14 +153,6 @@ class Spot implements IDBEntity
         $this->creator_id = $creator_id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCategoryId()
-    {
-        return $this->category_id;
-    }
-
     function getAssociationArray()
     {
         $assoArr = array();
@@ -205,10 +188,6 @@ class Spot implements IDBEntity
         if($this->creator_id !== null)
         {
             $assoArr['creator_id'] = $this->creator_id;
-        }
-        if($this->category_id !== null)
-        {
-            $assoArr['category_id'] = $this->category_id;
         }
 
         return $assoArr;
