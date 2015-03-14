@@ -11,6 +11,7 @@ class Picture implements IDBEntity
     private $date_created;
     private $uploader_id;
     private $spot_id;
+    private $category_id;
 
     /**
      * @return mixed
@@ -115,6 +116,22 @@ class Picture implements IDBEntity
         $this->spot_id = $spot_id;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCategoryId()
+    {
+        return $this->category_id;
+    }
+
+    /**
+     * @param mixed $category_id
+     */
+    public function setCategoryId($category_id)
+    {
+        $this->category_id = $category_id;
+    }
+
     function getAssociationArray()
     {
         $assoArr = array();
@@ -146,6 +163,10 @@ class Picture implements IDBEntity
         if($this->spot_id !== null)
         {
             $assoArr['spot_id'] = $this->spot_id;
+        }
+        if($this->category_id !== null)
+        {
+            $assoArr['category_id'] = $this->category_id;
         }
 
         return $assoArr;

@@ -16,6 +16,10 @@ if(isset($_POST['uploader_id'])){
     $picture->setUploaderId($_POST['uploader_id']);
 }
 
+if(isset($_POST['category_id'])){
+    $picture->setCategoryId($_POST['category_id']);
+}
+
 $limit = isset($_POST['limit']) ? $_POST['limit'] : 1;
 $offset = isset($_POST['offset']) ? $_POST['offset'] : 0;
 $instance = PGsqlDAO::getInstance();
