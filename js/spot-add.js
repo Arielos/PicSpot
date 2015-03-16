@@ -16,7 +16,6 @@ $(function() {
 		var spotTips = $("#spottips").val();
 		var spotLat = marker.position.lat();
 		var spotLng = marker.position.lng();
-		var categoryId = $("input[name='category-id']").val();
 
 		e.preventDefault();
 		$.ajax({
@@ -30,17 +29,14 @@ $(function() {
 					'spot-lng':spotLng
 			},
 			success: function(data,status) {
-				if(data=="ok") {
-					alert(status);
-					//TODO: add action for 'add' success
+				if(data!="failure") {
+					alert("ID = "+data);
 				}
 				else{
-					alert("failure!");
-					//TODO: add action for 'add' fail
+					alert("failure");
 				}
 			},
 			error: function(xhr,desc,err){
-				console.log(xhr);
 				alert("Details" + err + desc);
 			}
 		});

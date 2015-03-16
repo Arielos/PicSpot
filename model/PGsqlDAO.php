@@ -55,12 +55,18 @@ class PGsqlDAO
         return $result;
     }
 
-    public function findSpotsByRadius($coordinates, $radius)
+    public function findSpotsByRadius($long, $lat, $radius, $offset = 0, $limit = 20)
     {
-        // TODO
+        InputChecker::isNonNegativeInteger($offset,"PGSqlDAO findEntitiesByValues offset must be a non-negative integer.");
+        InputChecker::isNonNegativeInteger($limit,"PGSqlDAO findEntitiesByValues limit must be a non-negative integer.");
+        InputChecker::isNumeric($radius,"PGSqlDAO findEntitiesByValues radius must be a numeric.");
+        $radius = abs($radius);
+        $query = "SELECT * FROM spot WHERE dist(spot.longitude,spot.latitude,{$long},{$lat}) <= {$radius} OFFSET {$offset} LIMIT {$limit}";
+        $result = pg_query($this->dbcnx,$query);
+        return $result ? pg_fetch_all($result) : null;
     }
 
-    public function findEntitiesByValues(IDBEntity $entity, $offset = 0, $limit = 1)
+    public function findEntitiesByValues(IDBEntity $entity, $offset = 0, $limit = 20)
     {
         InputChecker::isNonNegativeInteger($offset,"PGSqlDAO findEntitiesByValues offset must be a non-negative integer.");
         InputChecker::isNonNegativeInteger($limit,"PGSqlDAO findEntitiesByValues limit must be a non-negative integer.");

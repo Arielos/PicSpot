@@ -42,9 +42,10 @@ if($areAllParametersSent)
 
         try {
             $result = $instance->insertNewEntity($spot);
-            echo "ok";
+            $result = $instance->findEntitiesByValues($spot);
+            echo $result[0]['id'];
         } catch (Exception $e) {
-            echo $e->getMessage();
+            echo "failure";
         }
     }
 }
