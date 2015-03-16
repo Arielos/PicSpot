@@ -14,19 +14,12 @@ if(isset($_POST['account-username']) &&
     $password= $_POST['account-password'];
     $email_address= $_POST['account-emailaddress'];
 
-    $options = [
-        'cost' => 11,
-        'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)
-    ];
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT, $options);
-    /* REMEMBER : password_hash contains the salt and algorithm that were used so that we can verify the hash later. */
-
     $instance = PGsqlDAO::getInstance();
     $account = new Account();
     $account->setUsername($username);
     $account->setFirstName($first_name);
     $account->setLastName($last_name);
-    $account->setHashedPassword($hashed_password);
+    $account->setHashedPassword(PasswordHasher::hash($password));
     $account->setEmailAddress($email_address);
 
     try{
