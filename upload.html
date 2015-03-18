@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen, projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/ImageSelectStyles.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <nav id="nav" class="cyan darken-2">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><img src="img/logo.png" height="100"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="album.html">Album</a></li>
+                <li><a href="#">Spots</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="main">
+        <div class="row font-oswald">
+            <div class="offset-m2">
+                <h4>Upload New Image</h4>
+            </div>
+        </div>
+
+        <div class="row" id="mainform1">
+            <form id="upload" class="col m5" action="" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="file-field input-field col m12">
+                        <input class="file-path validate" type="text"/>
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+                            <input type="file" id="imagesSelect" name="image-file" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <div class="card blue-grey darken-1" id="filedrag">
+                            <div class="card-content white-text">
+                                <span class="flow-text">
+                                    <h4><i class="mdi-device-now-wallpaper"></i>&nbsp;&nbsp;Drop Files Here</h4>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12">
+                        <textarea class="materialize-textarea" id="image-description" name="spot-description"
+                                      style="resize:none;" required="true"></textarea>
+                        <label for="image-description">Description</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <label>Category</label>
+                        <select id="image-category-picker">
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="col m5">
+                <label id="gps-coordinates-label" class="offset-s2 col m12 control-label">GPS Coordinates: 12.234343434 12.234343434</label>
+                <div class="col m1" id="map-container">
+                    <div id="map-canvas" style="width:600px; height:470px;"></div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div id="imagesData"></div>
+            </div>
+            <div class="row">
+                <div class="offset-m8 col m4">
+                    <button type="button" class="waves-effect waves-light btn" name="clearBtn">Clear</button>
+                    <button type="button" class="waves-effect waves-light btn" id="nextBtn">
+                        Next
+                        <i class="mdi-content-send right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="mainform2" hidden="hidden">
+            <form class="col m7" method="post">
+                <div class="row">
+                    <div class="input-field col m12">
+                        <input id="spot-name" type="text" class="validate">
+                        <label for="spot-name">Display Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12">
+                        <textarea class="materialize-textarea" id="spot-description" name="spot-description"
+                                      style="resize:none;" required="true"></textarea>
+                        <label for="spot-description">Description</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-m3 col m9">
+                        <button type="button" class="waves-effect waves-light btn-large" name="clearBtn">Clear</button>
+                        <button type="button" class="waves-effect waves-light btn-large" id="submitBtn">
+                            Submit
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="page-footer cyan darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col m6 s12">
+                    <h6 class="white-text">Links</h6>
+                    <i class="mdi-content-link"></i>
+                    <a href="http://www.materializecss.com/">Materialize</a>&nbsp;|
+                    <a href="http://www.glyphicons.com">Glyphicons</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2015 Copyright PicSpot
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuT51pdC9Crt9R0MmhD-UMK_FYQUiHkNY">
+    </script>
+    <script type="application/javascript" src="js/googlemaps.js"></script>
+    <script type="text/javascript" src="js/spot-add.js"></script>
+    <script type="text/javascript" src="js/image-add.js"></script>
+</body>
+</html>

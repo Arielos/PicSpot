@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PicSpot</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen, projection" />
+</head>
+<body>
+
+<!-- Page Logo Image -->
+<div class="offset-logo">
+    <h1>
+        <a href="index.html">
+            <img class="logo" src="img/logo.png" />
+        </a>
+    </h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="input-field col s7">
+            <input id="search" type="text" placeholder="Search for spots...">
+        </div>
+        <div class="input-field col s2">
+            <a class="btn waves-effect waves-light" type="submit"><i class="small-icon mdi-action-search"></i>&nbsp;Search</a>
+        </div>
+        <div class="input-field col s3">
+            <a id="upload" class="btn waves-effect waves-light" type="button"><i class="small-icon mdi-file-cloud-upload"></i>&nbsp;Upload Image</a>
+        </div>
+    </div>
+
+    <!--Google Maps-->
+    <div class="row">
+        <div class="offset-col s2 col s8" id="map-container">
+            <div id="map-canvas" style="width:1000px; height:470px;"></div>
+        </div>
+    </div>
+    <!--Google Maps-->
+</div>
+
+<footer class="page-footer cyan darken-2">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h6 class="white-text">Links</h6>
+                <i class="mdi-content-link"></i>
+                <a href="http://www.materializecss.com/">Materialize</a>&nbsp;|
+                <a href="http://www.glyphicons.com">Glyphicons</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            © 2015 Copyright PicSpot
+        </div>
+    </div>
+</footer>
+
+<script type="application/javascript" src="js/jquery.js"></script>
+<script type="application/javascript" src="js/jquery-ui.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script type="application/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuT51pdC9Crt9R0MmhD-UMK_FYQUiHkNY"></script>
+<script type="application/javascript" src="js/googlemaps.js"></script>
+<script type="application/javascript" src="js/index.js"></script>
+</body>
+</html>

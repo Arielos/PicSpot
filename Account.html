@@ -2,16 +2,81 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Account</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <form method="post" action="functions/addAccount.php">
-        <input type="text" name="account-username"/>
-        <input type="text" name="firstname-username"/>
-        <input type="text" name="lastname-username"/>
-        <input type="email" name="email-username"/>
-        <input type="password" name="account-password" />
-        <input type="submit" />
-    </form>
+    <nav id="nav" class="cyan darken-2">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><img src="img/logo.png" height="100"></a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="#">Spots</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-nav">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="#">Spots</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="main">
+        <div class="row font-oswald">
+            <div class="offset-m2">
+                <h4>Create Account</h4>
+            </div>
+        </div>
+        <div class="row" id="mainform1">
+            <form class="col m12" action="functions/addAccount.php" method="post">
+                <div class="row">
+                    <div class="input-field col m6">
+                        <input type="text" id="account-username" name="account-username" required="true" />
+                        <label for="account-username">User Name</label>
+                    </div>
+                    <div class="input-field col m6">
+                        <input type="email" id="account-emailaddress" name="account-emailaddress" required="true" />
+                        <label for="account-emailaddress">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m6">
+                        <input type="text" id="account-firstname" name="account-firstname" required="true" />
+                        <label for="account-firstname">First Name</label>
+                    </div>
+                    <div class="input-field col m6">
+                        <input type="text" id="account-lastname" name="account-lastname" required="true" />
+                        <label for="account-lastname">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m6">
+                        <input type="password" id="account-password" name="account-password" required="true" />
+                        <label for="account-password">Password</label>
+                    </div>
+                    <div class="input-field col m6">
+                        <input type="password" id="account-password-repeat" name="account-password-repeat" required="true" />
+                        <label for="account-password-repeat">Repeat Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-m8 col m4">
+                        <button type="reset" class="waves-effect waves-light btn" name="clearBtn">Clear</button>
+                        <button type="submit" class="waves-effect waves-light btn" id="submitBtn">
+                            Submit
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
