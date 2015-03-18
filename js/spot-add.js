@@ -2,7 +2,6 @@ $(function() {
 	$("button[name='clearBtn']").bind("click", function() {
 		$(":input[type='text']").val("");
 		$("textarea").val("");
-		$("#image-category-picker").index(0);
 		if (marker != null) {
 			marker.setMap(null);
 		}
@@ -15,8 +14,6 @@ $(function() {
             $("#submitBtn").bind("click", submitSpotClickHandler);
         }
     });
-
-    $('#image-category-picker').material_select();
 });
 
 function submitSpotClickHandler(e) {

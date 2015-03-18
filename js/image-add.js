@@ -9,11 +9,13 @@ $(function() {
     var categories = ["Birds", "Landscapes", "Macro", "Nature", "Portraits",
         "Street", "Architecture", "Fashion", "Weddings", "Other"];
 
-    for (var i = 1; i < categories.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
         $("#image-category-picker").append(
             "<option>" + categories[i] + "</option>"
         );
     }
+
+    $('#image-category-picker').material_select();
 
     var fileselect = document.getElementById('imagesSelect');
 	var filedrag = document.getElementById('filedrag');
@@ -29,6 +31,8 @@ $(function() {
 		filedrag.addEventListener("drop", FileSelectHandler, false);
 		filedrag.style.display = "block";
     }
+
+
 
 });
 
@@ -64,8 +68,8 @@ function ParseFile(file) {
 		reader.onload = function(e) {
 			$('#imagesData').append(
 			    "<div class='col-sm-3 col-md-3'>" +
-				    "<div class='thumbnail fadeInAnim'>" +
-		    		    "<img src='" + e.target.result + "' class='scale'/>" +
+				    "<div class='thumbnail'>" +
+		    		    "<img src='" + e.target.result + "' width='250' />" +
                         "<div class='caption'>" +
                             "<h6>" + file.name + "</h6>" +
                         "</div>" +

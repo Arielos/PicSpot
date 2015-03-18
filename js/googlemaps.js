@@ -13,7 +13,6 @@ $(function() {
     */
     //var coords = new google.maps.LatLng(32.09374408993661, 35.13043239712715);
     //var m = placeMarker(coords, map);
-    alert("done");
 });
 
 function initialize() {
