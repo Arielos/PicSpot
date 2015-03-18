@@ -1,0 +1,143 @@
+body {
+    margin-top: 10px;
+    background-color: #f1f1f1 !important;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+footer div div div a:link {
+    color: #ffffff;
+}
+
+footer div div div a:visited {
+    color: #bdbdbd;
+}
+
+footer div div div a:hover {
+    color: #ff6d00;
+}
+
+footer div div div a:active {
+    color: #ffab40;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#map-canvas {
+    height: 100%; margin: 0; padding: 0;
+}
+
+.offset-logo {
+    margin-left: 40px;
+}
+
+.small-icon {
+    font-size: 15px;
+}
+
+#nav {
+    height: 110px;
+}
+
+.logo {
+    height: 110px;
+}
+
+.font-oswald {
+    font-family: 'Oswald';
+}
+
+#gps-coordinates-label {
+    opacity: 0.5;
+    //color: #7d7f85 !important;
+}
+
+@keyframes rotateInLeft {
+    transform-origin;
+    from {
+        transform-origin: 0% 0%;
+        transform: rotateY(180deg);
+    }
+    to {
+        transform-origin: 0% 0%;
+        transform: rotateY(0deg);
+   }
+}
+
+@keyframes rotateInRight {
+    from {
+        transform-origin: 100% 0%;
+        transform: rotateY(-180deg);
+    }
+    to {
+        transform-origin: 100% 0%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutInOutSwirl {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+        transform: rotateZ(0deg);
+    }
+    75% {
+        opacity: 0.5;
+        transform: rotateZ(180deg);
+    }
+    100% {
+        opacity: 1.0;
+        transform: rotateZ(360deg);
+    }
+}
+
+.fadeInAnim {
+    animation-name: fadeIn;
+    animation-duration: 5s;
+}
+
+.slideLeftToRightAnim {
+  animation-name: diagonal-slide;
+  animation-duration: 2s;
+}
+
+.scale {
+    transition: 1s ease-in-out;
+}
+
+.scale:hover {
+    transform: scale(2);
+}
+
+@keyframes diagonal-slide {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1.0;
+  }
+}
