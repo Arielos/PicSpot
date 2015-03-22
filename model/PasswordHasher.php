@@ -1,4 +1,5 @@
 <?php
+include_once 'password.php';
 
 class PasswordHasher {
     static function hash($password){
